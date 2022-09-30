@@ -11,61 +11,32 @@
     </head>
 
     <body>
-        <h1>TEST</h1>
-      
-        <div class="ratio ratio-16x9">
-            <div id="player"></div>
+
+        <div class="container">
+
+            <h1>TEST</h1>
+        
+            <div class="ratio ratio-16x9">
+                <div id="player"></div>
+            </div>
+        
+            <div class="tomorrow" data-location-id="125800" data-language="EN" data-unit-system="IMPERIAL" data-skin="light" data-widget-type="aqiMini"></div>
         </div>
 
 
         <script>
-            (function(d, s, id) {
-                if (d.getElementById(id)) {
-                    if (window.__TOMORROW__) {
-                        window.__TOMORROW__.renderWidget();
-                    }
-                    return;
-                }
-                const fjs = d.getElementsByTagName(s)[0];
-                const js = d.createElement(s);
-                js.id = id;
-                js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-    
-                fjs.parentNode.insertBefore(js, fjs);
-            })(document, 'script', 'tomorrow-sdk');
-            </script>
-    
-            <div class="tomorrow"
-               data-location-id="125800"
-               data-language="EN"
-               data-unit-system="IMPERIAL"
-               data-skin="light"
-               data-widget-type="aqiMini"
-               style="padding-bottom:22px;position:relative;"
-            >
-             
-            </div>
-
-
-
-        <script>
-            // 2. This code loads the IFrame Player API code asynchronously.
+            // Youtube Player
             var tag = document.createElement('script');
 
             tag.src = "https://www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-            // 3. This function creates an <iframe> (and YouTube player)
-            //    after the API code downloads.
             var player;
             function onYouTubeIframeAPIReady() {
                 player = new YT.Player('player', {
-                //height: '100%',
-                //width: '100%',
                 videoId: '2c7NV66YzKA',
                 playerVars: {
-                    //'playsinline': 1,
                     autoplay: 1,
                     loop: 0,
                     controls: 0,
@@ -83,25 +54,35 @@
                 });
             }
 
-            // 4. The API will call this function when the video player is ready.
             function onPlayerReady(event) {
-                //event.target.playVideo();
                 event.target.mute();
                 setTimeout(function() {
                     event.target.playVideo();
                 }, 0);
             }
 
-            // 5. The API calls this function when the player's state changes.
-            //    The function indicates that when playing a video (state=1),
-            //    the player should play for six seconds and then stop.
-            var done = false;
             function onPlayerStateChange(event) {
                 console.log(event.data);
             }
    
         </script>
 
+        <script>
+            (function(d, s, id) {
+                if (d.getElementById(id)) {
+                    if (window.__TOMORROW__) {
+                        window.__TOMORROW__.renderWidget();
+                    }
+                    return;
+                }
+                const fjs = d.getElementsByTagName(s)[0];
+                const js = d.createElement(s);
+                js.id = id;
+                js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+                fjs.parentNode.insertBefore(js, fjs);
+            })(document, 'script', 'tomorrow-sdk');
+        </script>
 
 
     

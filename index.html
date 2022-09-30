@@ -31,9 +31,13 @@
             var player;
             function onYouTubePlayerAPIReady() {
                 player = new YT.Player('ytplayer', {
-                height: '360',
-                width: '640',
-                videoId: '2c7NV66YzKA'
+                    height: '360',
+                    width: '640',
+                    videoId: '2c7NV66YzKA',
+                    autoplay: 1,
+                    controls: 0,
+                    disablekb: 1,
+                    modestbranding: 1 
                 });
             }
         </script>

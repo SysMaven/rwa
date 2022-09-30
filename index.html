@@ -11,40 +11,34 @@
 
     <body>
         <h1>TEST</h1>
-        <p>Test</p>
-        <iframe src="https://www.youtube-nocookie.com/embed/2c7NV66YzKA?autoplay=1&modestbranding=1&controls=0" width="560" height="315" title="San Clemente Camera" frameborder="0" allowfullscreen></iframe>
+      
 
-
-
-        <h2>Test 2</h2>
         <div id="ytplayer"></div>
 
-        <script>
-            // Load the IFrame Player API code asynchronously.
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/player_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            // Replace the 'ytplayer' element with an <iframe> and
-            // YouTube player after the API code downloads.
-            var player;
-            function onYouTubePlayerAPIReady() {
-                player = new YT.Player('ytplayer', {
-                    height: '360',
-                    width: '640',
-                    videoId: '2c7NV66YzKA',
-                    autoplay: 1,
-                    controls: 0,
-                    disablekb: 1,
-                    modestbranding: 1 
-                });
-            }
-        </script>
-
+        
         <script>
             window.onload = function () {
                 console.log('Starting...');
+
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                var player;
+                function onYouTubePlayerAPIReady() {
+                    player = new YT.Player('ytplayer', {
+                        height: '360',
+                        width: '640',
+                        videoId: '2c7NV66YzKA',
+                        autoplay: 1,
+                        controls: 0,
+                        disablekb: 1,
+                        modestbranding: 1 
+                    });
+                }
+                
             };
         </script>
     </body>

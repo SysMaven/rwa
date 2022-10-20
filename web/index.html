@@ -12,60 +12,32 @@
 
     <body>
 
-        <div class="container">
+        <div class="container-xxl">
 
-            <h1>TEST</h1>
-        
-            <div class="card ratio ratio-16x9">
-                <div id="player"></div>
+            <h1>Olas</h1>
+            <h2>San Clemente Surf condition</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="border border-5 rounded bg-danger ratio ratio-16x9">
+                        <div id="player"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Aaaa</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         
-            <div class="tomorrow" data-location-id="125800" data-language="EN" data-unit-system="IMPERIAL" data-skin="light" data-widget-type="aqiMini"></div>
+           
+        
+            
         </div>
 
-
-        <script>
-            // Youtube Player
-            var tag = document.createElement('script');
-
-            tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            var player;
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('player', {
-                videoId: '2c7NV66YzKA',
-                playerVars: {
-                    autoplay: 1,
-                    loop: 0,
-                    controls: 0,
-                    showinfo: 0,
-                    autohide: 1,
-                    playsinline: 1,
-                    mute: 1,
-                    modestbranding: 1,
-                    vq: 'hd1080'
-                },
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-                });
-            }
-
-            function onPlayerReady(event) {
-                event.target.mute();
-                setTimeout(function() {
-                    event.target.playVideo();
-                }, 0);
-            }
-
-            function onPlayerStateChange(event) {
-                console.log(event.data);
-            }
-   
-        </script>
+        <script src="/js/yt.js"></script>
 
         <script>
             (function(d, s, id) {

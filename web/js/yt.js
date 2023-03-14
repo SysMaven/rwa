@@ -28,8 +28,8 @@ function onYouTubeIframeAPIReady() {
     });
 
     //Custom
-    const iframe = player.g;
-    iframe.classList.add('rounded');
+    //const iframe = player.g;
+    //iframe.classList.add('rounded'); does not work anymore
 }
 
 function onPlayerReady(event) {

@@ -13,6 +13,11 @@ var options = {
             left: 2,
             blur: 5,
             opacity: 0.06
+        },
+        toolbar: {
+            tools: {
+                download: false
+            }
         }
     },
     colors: ['#00E396', '#0090FF'],

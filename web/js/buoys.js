@@ -23,7 +23,6 @@ buoys.forEach(buoy => {
     fetch(RSSConverter)
         .then(res => res.json())
         .then((out) => {
-            //console.log(out.items);
             cardBody.innerHTML = `<h6>${out.items[0].title}</h6>` + out.items[0].content;
         })
         .catch(err => console.error(err));

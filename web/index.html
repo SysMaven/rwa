@@ -17,29 +17,23 @@
 
     <body>
 
-        <div class="container-xxl">
+        <div class="container-xxl my-4">
 
-            <h1 class="display-5">San Clemente</h1>
-            <h2>Surf conditions</h2>
+            <h1 class="display-5">San Clemente <small>Surf conditions</small></h1>
 
-            <div class="row g-3">
-                <div class="col-lg-6">
-                    <div class="card ratio ratio-16x9">
-                        <div id="player"></div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div id="map" class=" ratio ratio-16x9"></div>
-                    </div>
-                </div>
+            <div class="card ratio ratio-16x9">
+                <div id="player"></div>
             </div>
-
+            
             <div class="row my-1 g-3" id="buoys">
             </div>
 
-            <div class="my-4">
+            <div class="card my-4 p-2">
                 <div id="timeline-chart"></div>
+            </div>
+
+            <div class="card">
+                <div id="map" class=" ratio ratio-16x9"></div>
             </div>
 
         </div>

@@ -28,6 +28,9 @@ const
     format = 'json';
 
 var options = {
+    title: {
+        text: 'Tides'
+    },
     chart: {
         type: "line",
         height: 300,
@@ -126,7 +129,7 @@ fetch(tide_data)
         var chartData = [];
         
         data.predictions.forEach(prediction => {
-            chartData.push([prediction.t, parseFloat(prediction.v).toFixed(2)]);
+            chartData.push([prediction.t, parseFloat(prediction.v).toFixed(1)]);
             //console.log(prediction) print in HTML???
         });
     

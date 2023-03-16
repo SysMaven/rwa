@@ -7,7 +7,7 @@ var buoysRow = document.getElementById("buoys");
 buoys.forEach(buoy => {
 
     const col = document.createElement("div");
-    col.classList.add('col-lg-3', 'col-md-6');
+    col.classList.add('col-lg-4', 'col-md-6'); 
 
     const card = document.createElement("div");
     card.classList.add('card', 'h-100');
